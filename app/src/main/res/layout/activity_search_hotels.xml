@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.julienhalford.hotelcompanion.SearchHotels">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="181dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Search"
+            android:textAppearance="@android:style/TextAppearance.Large" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="109dp"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/editText10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/HotelRating"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText9" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="133dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="11dp"
+                android:layout_weight="1"
+                android:onClick="onButtonClickSearchRating"
+                android:text="@string/RatingSearch"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editText10"
+                app:layout_constraintTop_toBottomOf="@+id/button9" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="132dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:onClick="onButtonClickSearchName"
+                android:text="@string/NAmeSearch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editText9"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/SearchTitle"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_search_hotels" />
+
+</android.support.design.widget.CoordinatorLayout>
